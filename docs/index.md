@@ -21,6 +21,12 @@ location.
 You can update the theme of the site using the `Theme Chooser` on the same page. As you can see I've opted for the
 `Hacker` theme.
 
+Useful references for Markdown Syntax are...
+
+* [Basic Syntax](https://markdownguide.org/basic-syntax)
+* [Extended Syntax](https://markdownguide.org/extended-syntax)
+* [Cheatsheet](https://markdownguide.org/cheat-sheet)
+
 ## Collaboration
 
 1. Make a fork of
