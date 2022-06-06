@@ -2,6 +2,9 @@
 
 [![](https://imgs.xkcd.com/comics/git.png)](https://xkcd.com/1597/)
 
+* Table of Contents
+{:toc}
+
 Notes on the Workshop [GitKraken : Zero to Hero](https://srse-git-github-zero2hero.netlify.app/).
 
 ## GitHub Pages
@@ -151,6 +154,27 @@ Staging allows a few changes to be added, rather than committing all changes at 
 
 Not when making edits directly to a single file online as typically you are only changing a single file, however
 although you do have the option to create a branch and pull request for your changes.
+
+### Wouldn't it be more meaningful if it was named "new push request"?
+
+It depends on your perspective, you are pushing but the recipient sees it as a "pulling" your changes into their branch.
+
+Given the original is their branch and you are adding to it then the owners perspective takes precedence, hence why its
+a request to "pull" your changes into their repository.
+
+### Can one skip forking, make a copy, and submit a PR?
+
+You could but you may not always have permission to submit pull requests directly.
+
+Also you should _never_ make changes directly to a `main` branch, you should always make them to a branch and then merge
+that branch via a Pull Request, this helps protect the `main` branch from errors creeping in as Pull Requests get
+reviewed. This is what forking is doing, its making a branch from the main repository for you to work on.
+
+### How should I do this in the terminal?
+
+The [Git manual](https:git-csm.com/docs/user-manual.html) contains all the equivalent command line options.  There is
+`man git` as well and each command has its own help page accessible with `git pull --help`, `git checkout --help`
+(generally its `git <command> --help`).
 
 # Links
 
