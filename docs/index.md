@@ -62,7 +62,7 @@ From Git Kraken you can add a Remote source to your repository which makes it ea
 been made to projects you have forked from. Branches can be aligned by dragging and dropping the icons from one branch
 to another.
 
-## Advanced Collaboation Through GitHub
+## Advanced Collaboration Through GitHub
 
 The basis of this is the concept of "branches" where you work on an isolated set of the code that is known (or should)
 work.
