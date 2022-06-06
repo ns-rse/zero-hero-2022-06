@@ -106,6 +106,13 @@ branch by...
 
 These questions are recorded across three runs of the course so far to see what questions crop up.
 
+### Will GitKraken expiring be a problem?
+
+Not for the course, but if you want to continue using it you should link it to your GitHub account where you use your
+University email address as you then benefit from [GitKraken Resources for
+Schools](https://www.gitkraken.com/github-campus-program) which runs in partnership with [GitHub Campus
+Program](https://education.github.com/schools).
+
 ### Can/should data be shared on GitHub?
 
 Technically you can, but GitHub isn't really designed for sharing large files. Further there may be data governance
