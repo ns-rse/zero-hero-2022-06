@@ -130,7 +130,7 @@ It is so that we can choose which changes to which files we wish to push at a gi
 
 A single push can send multiple commits.
 
-### What's the benefit of 'stage -> commit' instead of having a direct 'commit'?
+### What's the benefit of `stage -> commit` instead of having a direct `commit`?
 
 Staging allows a few changes to be added, rather than committing all changes at the same time.
 
