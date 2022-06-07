@@ -109,9 +109,9 @@ branch by...
 
 These questions are recorded across three runs of the course so far to see what questions crop up.
 
-### Git
+## Git
 
-#### I got this error: "Push main: Push failed on refs/heads/main: push declined due to email privacy restrictions"
+### I got this error: "Push main: Push failed on refs/heads/main: push declined due to email privacy restrictions"
 
 A quick fix to this is to visit the [GitHub Email Settings](https://github.com/settings/emails) and uncheck `Block
 command line pushes that expose my email`. This is not ideal though as its exposes your email address. A better solution
@@ -129,21 +129,32 @@ is to...
 6. Push the amended git with either `git push` at the Command Line Interface or using the `Push` button in GitKraken
    Client.
 
-#### Can you delete changes?
+### Can you delete changes?
 
-You can but typically you make subsequent commits to revert changes. It is possible to roll back a branch to any stage
-in the history of commits by using `git checkout <hash_id>` but this will mean you are in a "Detached HEAD" state as you
-are not at the `HEAD` of that branch. It is possible to reset which commit `HEAD` points to but it is a destructive
+You can but its complicated and there are many options available which will be contingent on what you want the commit
+history to reflect, although typically most leave the commit history in place and add a new commit documenting the
+changes.
+
+You can `git reset` to roll the `HEAD` back to an earlier point (for more see [How To Use Git
+Reset](https://www.w3docs.com/learn-git/git-reset.html)) or you can `git revert` to undo the changes introduced by a
+specific commit (see [How To Use Git Revert](https://www.w3docs.com/learn-git/git-revert.html)). Other options include
+using `git rm` to remove specific files from being tracked ([How To Use Git
+RM](https://www.w3docs.com/learn-git/git-rm.html)) and `git rebase` to move and combine a series of commits ([How Tow
+Use Git Rebase](https://www.w3docs.com/learn-git/git-rebase.html)).
+
+It is possible to roll back a branch to any stage in the history of commits by using `git checkout <hash_id>` but this
+will mean you are in a [Detached HEAD](https://www.w3docs.com/learn-git/git-checkout.html#detached-heads-27) state as
+you are not at the `HEAD` of that branch. It is possible to reset which commit `HEAD` points to but it is a destructive
 process and can cause a lot of problems and is not therefore recommended.
 
-If you have not committed changes locally and only stage them you can delete changes and then stage and commit
-any changes or corrections.
+If you have not committed changes locally and only staged them you can delete or change anything, it will just unstage
+the modified files and you can then stage and commit them again after making corrections.
 
-#### If I have multiple commits do I need to push them individually?
+### If I have multiple commits do I need to push them individually?
 
 No a push can include multiple commits.
 
-#### Why do we need to 'stage'? / What's the benefit of `stage -> commit` instead of having a direct `commit`?
+### Why do we need to 'stage'? / What's the benefit of `stage -> commit` instead of having a direct `commit`?
 
 It is so that we can choose which changes to which files we wish to push at a given point in time. You may have a
 project where you have modified 14 files on a branch you are working on but at this point in time half of those are
@@ -151,25 +162,29 @@ still experimental and not ready to be pushed. You therefore only stage the 7 fi
 the others in place locally for inclusion in a later push.
 
 
-### GitHub
+## GitHub
 
-#### Can/should data be shared on GitHub?
+### Can/should data be shared on GitHub?
 
 Technically you can, but GitHub isn't really designed for sharing large files. Further there may be data governance
 issues that cover your data. For more information on sharing your data see the [Sharing research data - Research Data
 Management - The University Library - The University of Sheffield](https://www.sheffield.ac.uk/library/rdm/publish).
 
 
-#### Wouldn't it be more meaningful if it was named "new push request"?
+### Wouldn't it be more meaningful if it was named "new push request"?
 
 It depends on your perspective. When you have made changes to a fork and you wish them to be incorporated into the
 original repositories branch then from your point of view you are pushing, just as you do from local to GitHub.
 
-However, from the perspective of the original maintainer they, as recipient, see it as "pulling" your changes into their
+From the perspective of the original maintainer they, as recipient, see it as "pulling" your changes into their
 branch. Given the original is their branch and you are adding to it then the owners perspective takes precedence, hence
 why its a request to "pull" your changes into their repository.
 
-#### Can you skip forking, make a copy, and submit a PR?
+However, it's best not to worry too much about it, a "pull request" is a way of merging a branch into another branch in
+a repository, and an opportunity to have a discussion about it before doing so.
+
+
+### Can one skip forking, make a copy, and submit a PR?
 
 You could but you may not always have permission to submit pull requests directly.
 
@@ -189,13 +204,15 @@ there is no need to choose which files to stage. However, rather than committing
 working on you do have the option to create a branch and pull request for your changes.
 
 
-### GitKraken
+## GitKraken
 
-#### How do I get GitKarken/GitHub pro account? / Will the trial of GitKraken expiring be a problem?
+### Will the trial period of GitKraken expiring be a problem? / How do I get GitKraken/GitHub pro account?
 
 The 7-day trial period only refers to a short window where you get all of the paid features that are available to try
 out. After this trial period expires you will still be able to use GitKraken and nothing in this course requires the
-paid features.
+paid features, for more information on the different features see [GitKraken Client
+Pricing](https://www.gitkraken.com/git-client/pricing).
+
 
 If you are using a trial version of GitKraken for this course you won't encounter any problems. Longer term though you
 will want to setup a GitHub account using your University email address which allows you to take advantage of their
@@ -208,28 +225,19 @@ Client Stand-Alone through their [GitKraken Resources for Schools](https://educa
 contingent on your account being registered with GitHub Campus Program.
 
 
-#### Does GitKraken pick up files added directly to the local repository?
+### Does GitKraken pick up files added directly to the local repository?
 
 Yes Git and GitKraken are aware of what files are within the repository, and which files are being tracked and which
 aren't and which files have changed since the last commit.
 
-### Miscellaneous
+## Miscellaneous
 
-#### Will we be covering the command line interface? / How should I do this in the terminal?
+### Will we be covering the command line interface? / How should I do this in the terminal?
 
 No, the focus of this course is using GitKraken to interact with Git and GitHub, however the [Git
 manual](https:git-csm.com/docs/user-manual.html) contains all the equivalent command line options.  There is `man git`
 as well and each command has its own help page accessible with `git pull --help`, `git checkout --help` (generally its
 `git <command> --help`). There are also a number of additional resources in the Links section below.
-
-
-
-
-### Miscellaneous
-
-#### Do you need to do anything with SSH/Auth/GPG tokens?
-
-Not at the moment for this project.
 
 # Links
 
